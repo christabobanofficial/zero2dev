@@ -12,6 +12,14 @@ def get_weather():
     url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
     data = requests.get(url).json()
 
+    print(data)  # debug
+
+    cod = str(data.get("cod"))  # convert to string safely
+
+    if cod != "200":
+        print("API Error:", data.get("message"))
+        return None, None
+
     temp = data["main"]["temp"]
     weather = data["weather"][0]["main"]
 
