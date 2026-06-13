@@ -1,7 +1,7 @@
 import requests
 import smtplib
 
-API_KEY = "YOUR_OPENWEATHER_API_KEY"
+API_KEY = "30d038c0511cc734017d7c85f50df2a9"
 CITY = "Thrissur,IN"
 
 EMAIL = "your_email@gmail.com"
